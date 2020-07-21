@@ -73,11 +73,14 @@ const PizzaIngredients: React.FC<PizzaIngredientsProps> = (props) => (
           </ListSubheader>
         }
       >
-        {get(props.pizza, 'ingredients', []).map((ingredient) => (
-          <ListItem key={ingredient}>
-            <ListItemText primary={ingredient} />
-          </ListItem>
-        ))}
+        {
+          // @ts-ignore
+          get(props.pizza, 'ingredients', []).map((ingredient) => (
+            <ListItem key={ingredient}>
+              <ListItemText primary={ingredient} />
+            </ListItem>
+          ))
+        }
       </List>
     </DialogContent>
     <DialogActions>

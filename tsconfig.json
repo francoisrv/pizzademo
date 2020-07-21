@@ -8,5 +8,6 @@
     "declarationMap": true,
     "target": "ES5",
     "resolveJsonModule": true
-  }
+  },
+  "exclude": ["nu/*"]
 }

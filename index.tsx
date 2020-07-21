@@ -6,8 +6,6 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import createStore from './redux/createStore'
 import config from './config'
-import App from './components/App'
-import Test from './components/Test'
 
 const { store, persistor } = createStore()
 
@@ -15,7 +13,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={config.history}>
       <PersistGate loading={null} persistor={persistor}>
-        <Test />
+        <div />
       </PersistGate>
     </ConnectedRouter>
   </Provider>,

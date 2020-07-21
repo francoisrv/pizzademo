@@ -12,7 +12,9 @@ function onSetViewPort(props: PizzaMapProps): ViewportProps {
   return {
     latitude: props.latitude,
     longitude: props.longitude,
+    // @ts-ignore
     width: '100%',
+    // @ts-ignore
     height: '100%',
     zoom: 15,
     transitionDuration: 3000,
