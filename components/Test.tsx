@@ -9,8 +9,6 @@ import CartButton from './CartButton.component'
 export default function Test() {
   const [showRestaurant, setShowRestaurant] = React.useState(true)
 
-  useLax()
-
   return (
     <div>
       <div
@@ -24,6 +22,7 @@ export default function Test() {
 
       {showRestaurant && (
         <div className="restaurant-wrapper">
+          <Appbar />
           <Restaurant />
         </div>
       )}
