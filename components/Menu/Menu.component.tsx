@@ -1,12 +1,11 @@
 import React from 'react'
-import { pick } from 'lodash'
-import { connect } from 'react-redux'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import GridListTileBar from '@material-ui/core/GridListTileBar'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
+
 import { Pizza } from '../../types'
 import Ingredients from '../Ingredients'
 

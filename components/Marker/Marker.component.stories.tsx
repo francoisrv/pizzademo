@@ -12,13 +12,14 @@ export default {
 }
 
 export const MarkerSimple = () => (
-  <div style={{}}>
-    <Map latitude={config.latitude} longitude={config.longitude} />
-    <Marker
-      restaurant={first(restaurants)}
-      onClose={() => {}}
-      selectrestaurant={() => {}}
-    />
+  <div style={{ width: '80vw', height: '80vh' }}>
+    <Map latitude={config.latitude} longitude={config.longitude}>
+      <Marker
+        restaurant={first(restaurants)}
+        onClose={() => {}}
+        selectRestaurant={() => {}}
+      />
+    </Map>
   </div>
 )
 

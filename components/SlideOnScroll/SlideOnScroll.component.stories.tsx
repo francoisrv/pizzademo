@@ -12,7 +12,7 @@ export default {
 
 export const SlideUpOnScrollDown = () => (
   <div style={{ height: 1000 }}>
-    <SlideOnScroll target={document.getElementById('root')}>
+    <SlideOnScroll target={window}>
       <AppBar>
         <Toolbar>
           <Typography>Slide up on scroll down</Typography>

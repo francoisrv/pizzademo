@@ -3,7 +3,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import Slide from '@material-ui/core/Slide'
 
 export interface SlideOnScrollProps {
-  target: HTMLElement
+  target: HTMLElement | Window
   children: React.ReactElement
 }
 

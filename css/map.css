@@ -5,3 +5,7 @@
   position: fixed;
   top: 0;
 }
+
+.map-container-restaurant {
+  top: -40vh;
+}

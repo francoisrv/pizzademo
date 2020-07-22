@@ -9,7 +9,7 @@ import Ratings from '../Ratings'
 import Menu from '../Menu'
 import restaurants from '../../restaurants.json'
 
-interface RestaurantViewProps {
+export interface RestaurantViewProps {
   restaurant?: Restaurant
 }
 

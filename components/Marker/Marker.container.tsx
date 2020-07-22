@@ -4,12 +4,12 @@ import {
   selectRestaurant,
   resetPreviewRestaurant,
 } from '../../redux/actions/restaurant.actions'
-import { Marker } from 'react-map-gl'
+import Marker from './Marker.component'
 
 export default connect(
   (state: ReduxState) => ({ restaurant: state.previewedRestaurant }),
   {
-    selectRestaurantAction: selectRestaurant,
-    resetPreviewRestaurantAction: resetPreviewRestaurant,
+    selectRestaurant,
+    onClose: resetPreviewRestaurant,
   }
 )(Marker)

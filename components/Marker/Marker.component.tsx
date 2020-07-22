@@ -7,19 +7,19 @@ import ReactPlayer from 'react-player'
 import { Restaurant } from '../../types'
 import Ratings from '../Ratings'
 
-export interface PizzaMarkerProps {
+export interface MarkerProps {
   restaurant: Restaurant
-  selectrestaurant: (restaurant: Restaurant) => any
+  selectRestaurant: (restaurant: Restaurant) => any
   onClose: () => any
 }
 
-const PizzaMarker: React.FC<PizzaMarkerProps> = (props) => {
+const Marker: React.FC<MarkerProps> = (props) => {
   if (!props.restaurant) {
     return <div />
   }
 
   function goToRestaurant() {
-    props.selectrestaurant(props.restaurant)
+    props.selectRestaurant(props.restaurant)
   }
 
   return (
@@ -48,4 +48,4 @@ const PizzaMarker: React.FC<PizzaMarkerProps> = (props) => {
   )
 }
 
-export default PizzaMarker
+export default Marker

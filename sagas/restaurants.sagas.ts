@@ -10,11 +10,11 @@ import { goToAction } from '../redux/actions/router.actions'
 import { ReduxActionType } from '../redux/types'
 
 function* selectRestaurantSaga(action: ReturnType<typeof selectRestaurant>) {
-  yield put(
-    goToAction(RESTAURANT_PATH, {
-      params: { restaurantName: kebabCase(action.payload.restaurant.name) },
-    })
-  )
+  // yield put(
+  //   goToAction(RESTAURANT_PATH, {
+  //     params: { restaurantName: kebabCase(action.payload.restaurant.name) },
+  //   })
+  // )
 }
 
 function* selectRestaurantBySlugSaga(

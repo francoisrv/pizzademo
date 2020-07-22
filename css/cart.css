@@ -1,0 +1,10 @@
+.cart-button-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.cart-button-icon {
+  font-size: 100px;
+  padding: 40px;
+}
