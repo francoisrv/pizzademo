@@ -1,9 +1,8 @@
 import React from 'react'
-import { linkTo } from '@storybook/addon-links'
 import Map from './Map.component'
 
 export default {
-  title: 'Map',
+  title: 'Map / Component',
   component: Map,
 }
 

@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/map",
+  "main": "./Map.component.tsx"
+}

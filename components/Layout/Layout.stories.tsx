@@ -4,7 +4,7 @@ import Layout from './Layout.component'
 import '../../css/map.css'
 
 export default {
-  title: '00 - Layout',
+  title: 'Layout / Layout',
   component: Layout,
 }
 
