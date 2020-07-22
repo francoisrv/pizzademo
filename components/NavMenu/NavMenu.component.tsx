@@ -5,6 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import GithubIcon from '@material-ui/icons/GitHub'
 import StorybookIcon from '@material-ui/icons/LibraryBooks'
+import LighthouseIcon from '@material-ui/icons/Flight'
 
 export interface NavMenuProps {
   // open: boolean
@@ -32,6 +33,12 @@ export default function NavMenu() {
           <StorybookIcon />
         </ListItemIcon>
         <ListItemText primary="Storybook" />
+      </MenuItem>
+      <MenuItem>
+        <ListItemIcon>
+          <LighthouseIcon />
+        </ListItemIcon>
+        <ListItemText primary="Lighthouse" />
       </MenuItem>
     </Menu>
   )
