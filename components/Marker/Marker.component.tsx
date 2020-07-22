@@ -8,35 +8,35 @@ import { Restaurant } from '../../types'
 import Ratings from '../Ratings'
 
 export interface PizzaMarkerProps {
-  pizzeria: Restaurant
-  selectPizzeria: (pizzeria: Restaurant) => any
+  restaurant: Restaurant
+  selectrestaurant: (restaurant: Restaurant) => any
   onClose: () => any
 }
 
 const PizzaMarker: React.FC<PizzaMarkerProps> = (props) => {
-  if (!props.pizzeria) {
+  if (!props.restaurant) {
     return <div />
   }
 
   function goToRestaurant() {
-    props.selectPizzeria(props.pizzeria)
+    props.selectrestaurant(props.restaurant)
   }
 
   return (
     <Popup
-      latitude={props.pizzeria.latitude}
-      longitude={props.pizzeria.longitude}
+      latitude={props.restaurant.latitude}
+      longitude={props.restaurant.longitude}
       onClose={props.onClose}
       closeOnClick={false}
     >
       <div onClick={goToRestaurant}>
-        <Typography>{props.pizzeria.name}</Typography>
+        <Typography>{props.restaurant.name}</Typography>
         <div>
-          <Ratings ratings={props.pizzeria.ratings} />
+          <Ratings ratings={props.restaurant.ratings} />
         </div>
         <ReactPlayer
           url={`https://storage.cloud.google.com/pizzame/${kebabCase(
-            props.pizzeria.name
+            props.restaurant.name
           )}.webm`}
           loop
           width={180}

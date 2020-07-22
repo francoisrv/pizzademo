@@ -12,7 +12,7 @@ import PizzaView from './PizzaView'
 import RestaurantView from './Restaurant'
 import { urlMatchesPattern, RESTAURANT_PATH, getPatternValue } from '../paths'
 import Cart from './Cart'
-import Pizzeria from './Pizzeria'
+import restaurant from './restaurant'
 
 type AppStore = Pick<ReduxState, 'selectedRestaurant'>
 
@@ -59,7 +59,7 @@ function AppView(props: AppProps) {
               <Route
                 path="/restaurants/:restaurantName"
                 exact
-                component={Pizzeria}
+                component={restaurant}
               />
             )}
           </Switch>

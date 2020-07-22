@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/cart-button",
+  "main": "./CartButton.container.tsx"
+}

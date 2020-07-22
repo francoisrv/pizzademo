@@ -10,11 +10,11 @@ import Typography from '@material-ui/core/Typography'
 import { Pizza } from '../../types'
 import Ingredients from '../Ingredients'
 
-export interface MenuViewProps {
+export interface MenuProps {
   pizzas: Pizza[]
 }
 
-const MenuView: React.FC<MenuViewProps> = (props) => {
+const Menu: React.FC<MenuProps> = (props) => {
   const [selectedPizza, setSelectedPizza] = React.useState<Pizza | null>(null)
 
   return (
@@ -54,4 +54,4 @@ const MenuView: React.FC<MenuViewProps> = (props) => {
   )
 }
 
-export default MenuView
+export default Menu

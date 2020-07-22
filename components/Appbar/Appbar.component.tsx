@@ -17,6 +17,7 @@ export interface AppbarProps {
 }
 
 const Appbar: React.FC<AppbarProps> = (props) => {
+  console.log({ props })
   const { isOpen, cartSize, open, restaurant } = props
 
   function openCartAction() {
@@ -33,13 +34,15 @@ const Appbar: React.FC<AppbarProps> = (props) => {
         <div style={{ flex: 1 }}>
           <Typography>{restaurant.name}</Typography>
         </div>
-        <div>
-          <IconButton onClick={openCartAction}>
-            <Badge badgeContent={cartSize} color="secondary">
-              <AddShoppingCartIcon style={{ color: 'white' }} />
-            </Badge>
-          </IconButton>
-        </div>
+        {cartSize > 0 && (
+          <div>
+            <IconButton onClick={openCartAction}>
+              <Badge badgeContent={cartSize} color="secondary">
+                <AddShoppingCartIcon style={{ color: 'white' }} />
+              </Badge>
+            </IconButton>
+          </div>
+        )}
       </Toolbar>
     </AppBar>
   )

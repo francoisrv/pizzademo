@@ -21,13 +21,13 @@ const persistConfig = {
   whitelist: config.whitelist,
 }
 
-export default function createStore() {
+export default function createStore(initialStore: Partial<ReduxState> = {}) {
   const rootReducer = combineReducers(reducers)
   const persistedReducer = persistReducer(persistConfig, rootReducer)
 
   const store: Store<ReduxState, any> = createReduxStore(
     persistedReducer,
-    {},
+    initialStore,
     compose(applyMiddleware(...middlewares))
   )
 

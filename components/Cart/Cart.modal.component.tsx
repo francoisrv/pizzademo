@@ -11,7 +11,7 @@ import { DialogActions } from '@material-ui/core'
 import { PizzaCart } from '../../types'
 import CartItem from '../CartItem'
 
-interface CartProps {
+export interface CartProps {
   pizzas: PizzaCart[]
   price: number
   open: boolean

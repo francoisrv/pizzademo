@@ -9,7 +9,7 @@ function Bubble() {
   )
 }
 
-export default function Pizzeria() {
+export default function restaurant() {
   const [showBubble, setBubble] = React.useState(false)
   const toggleBubble = () => {
     setBubble(!showBubble)

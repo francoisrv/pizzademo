@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/slide-on-scroll",
+  "main": "./SlideOnScroll.component.tsx"
+}

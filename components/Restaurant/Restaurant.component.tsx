@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-import { kebabCase } from 'lodash'
+import { kebabCase, first } from 'lodash'
 import Typography from '@material-ui/core/Typography'
 import { useMediaQuery } from 'react-responsive'
+
 import { Restaurant } from '../../types'
 import Ratings from '../Ratings'
-import MenuView from '../Menu/Menu.component'
+import Menu from '../Menu'
+import restaurants from '../../restaurants.json'
 
 interface RestaurantViewProps {
   restaurant?: Restaurant
@@ -54,16 +56,13 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
         </div>
       </div>
 
-      <MenuView />
+      <Menu />
     </div>
   )
 }
 
 RestaurantView.defaultProps = {
-  restaurant: {
-    name: 'Napoli Pizza',
-    ratings: 0,
-  },
+  restaurant: first(restaurants),
 }
 
 export default RestaurantView

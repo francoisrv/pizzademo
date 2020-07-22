@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/restaurant-map-marker",
+  "main": "./Marker.container.tsx"
+}
