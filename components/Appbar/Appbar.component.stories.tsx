@@ -6,7 +6,7 @@ import restaurants from '../../restaurants.json'
 import { first } from 'lodash'
 
 export default {
-  title: 'Layout / Appbar / Component',
+  title: 'Appbar / Component',
   component: Appbar,
 }
 

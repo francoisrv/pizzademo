@@ -4,7 +4,7 @@ import React from 'react'
 import { WithRedux } from '../../utils/storybook.utils'
 
 export default {
-  title: 'Restaurant / Menu',
+  title: 'Menu',
   component: Menu,
 }
 

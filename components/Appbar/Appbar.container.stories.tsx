@@ -8,7 +8,7 @@ import { WithRedux } from '../../utils/storybook.utils'
 import Cart from '../Cart'
 
 export default {
-  title: 'Layout / Appbar / Container',
+  title: 'Appbar / Container',
   component: Appbar,
 }
 

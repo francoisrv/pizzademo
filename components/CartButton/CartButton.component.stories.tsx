@@ -4,16 +4,22 @@ import CartButton from './CartButton.component'
 import { openCart, closeCart } from '../../redux/actions/cart.actions'
 
 export default {
-  title: 'Cart / Cart Button / Component',
+  title: 'Cart Button / Component',
   component: CartButton,
 }
 
 export const CartButtonSimple = () => (
-  <div style={{}}>
-    <CartButton openCart={openCart} closeCart={closeCart} cartOpen />
-  </div>
+  <CartButton openCart={openCart} closeCart={closeCart} cartOpen items={4} />
 )
 
 CartButtonSimple.story = {
-  name: 'Regular',
+  name: 'With items',
+}
+
+export const EmptyCart = () => (
+  <CartButton openCart={openCart} closeCart={closeCart} cartOpen items={0} />
+)
+
+EmptyCart.story = {
+  name: 'With empty cart',
 }

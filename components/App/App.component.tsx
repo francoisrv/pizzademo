@@ -4,6 +4,7 @@ import CartButton from '../CartButton'
 import Map from '../Map'
 import Cart from '../Cart'
 import RestaurantView from '../Restaurant'
+import NavIcon from '../NavIcon'
 
 export interface AppProps {
   showRestaurant: boolean
@@ -26,6 +27,8 @@ export default function App(props: AppProps) {
       {showRestaurant && <RestaurantView />}
 
       <CartButton />
+
+      <NavIcon />
 
       <Cart />
     </div>

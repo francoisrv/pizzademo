@@ -7,7 +7,7 @@ import Map from '../Map/Map.component'
 import config from '../../config'
 
 export default {
-  title: 'Restaurant / Marker',
+  title: 'Marker',
   component: Marker,
 }
 

@@ -8,6 +8,8 @@ import { Restaurant } from '../../types'
 import Ratings from '../Ratings'
 import Menu from '../Menu'
 import restaurants from '../../restaurants.json'
+import SlideOnScroll from '../SlideOnScroll'
+import Appbar from '../Appbar'
 
 export interface RestaurantViewProps {
   restaurant?: Restaurant
@@ -20,6 +22,7 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
 
   return (
     <div
+      id="restaurant"
       style={{
         height: '100vh',
         width: '100vw',
@@ -27,6 +30,11 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
         overflow: 'auto',
       }}
     >
+      <SlideOnScroll>
+        <div>
+          <Appbar />
+        </div>
+      </SlideOnScroll>
       <div style={{ height: '20vh' }} />
       <header>
         <div>

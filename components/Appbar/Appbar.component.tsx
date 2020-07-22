@@ -8,6 +8,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 
 import { openCart } from '../../redux/actions/cart.actions'
 import { Restaurant } from '../../types'
+import Ratings from '../Ratings'
 
 export interface AppbarProps {
   isCartModalOpen: boolean
@@ -30,8 +31,9 @@ const Appbar: React.FC<AppbarProps> = (props) => {
   return (
     <AppBar>
       <Toolbar>
-        <div style={{ flex: 1 }}>
+        <div className="app-bar--header">
           <Typography>{restaurant.name}</Typography>
+          <Ratings ratings={restaurant.ratings} />
         </div>
         {cartSize > 0 && (
           <div>

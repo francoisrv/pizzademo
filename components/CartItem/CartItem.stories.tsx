@@ -3,7 +3,7 @@ import CartItem from '.'
 import menu from '../../menu.json'
 
 export default {
-  title: 'Cart / Cart Item',
+  title: 'Cart Item',
 }
 
 export const ReduxExample = () => (

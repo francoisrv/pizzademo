@@ -7,7 +7,7 @@ import restaurants from '../../restaurants.json'
 import { first } from 'lodash'
 
 export default {
-  title: 'Layout / App / Component',
+  title: 'App / Component',
 }
 
 export const MapView = () => (

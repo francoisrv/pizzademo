@@ -6,7 +6,7 @@ import { first } from 'lodash'
 import { addToCart } from '../../redux/actions/cart.actions'
 
 export default {
-  title: 'Pizza / Ingredients',
+  title: 'Ingredients',
   component: Ingredients,
 }
 

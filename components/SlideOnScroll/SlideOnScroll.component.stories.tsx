@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
 export default {
-  title: 'Layout / Slide On Scroll / Component',
+  title: 'Slide On Scroll / Component',
   component: SlideOnScroll,
 }
 

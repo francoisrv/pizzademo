@@ -5,12 +5,12 @@ import { WithRedux } from '../../utils/storybook.utils'
 import { first } from 'lodash'
 
 export default {
-  title: 'Restaurant / Page',
+  title: 'Restaurant',
   component: Restaurant,
 }
 
 export const Example = () => (
-  <WithRedux persist={false}>
+  <WithRedux persist={false} state={{ selectedRestaurant: first(restaurants) }}>
     <Restaurant restaurant={first(restaurants)} />
   </WithRedux>
 )
