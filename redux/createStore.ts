@@ -21,9 +21,19 @@ const persistConfig = {
   whitelist: config.whitelist,
 }
 
-export default function createStore(initialStore: Partial<ReduxState> = {}) {
+export interface Options {
+  persist?: boolean
+}
+
+export default function createStore(
+  initialStore: Partial<ReduxState> = {},
+  options: Options = {}
+) {
   const rootReducer = combineReducers(reducers)
-  const persistedReducer = persistReducer(persistConfig, rootReducer)
+  const persistedReducer =
+    options.persist === false
+      ? rootReducer
+      : persistReducer(persistConfig, rootReducer)
 
   const store: Store<ReduxState, any> = createReduxStore(
     persistedReducer,

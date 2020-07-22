@@ -1,43 +1,30 @@
-import createStore from '../redux/createStore'
+import createStore, {
+  Options as CreateStoreOptions,
+} from '../redux/createStore'
 import { Provider } from 'react-redux'
 import React from 'react'
 import ReduxState from '../redux/state'
-import { AnyAction } from 'redux'
-
-export interface DispatcherProps {
-  children: React.ReactElement
-  action: AnyAction
-}
-
-export function withReduxDecorator(initialState: Partial<ReduxState> = {}) {
-  const { store } = createStore(initialState)
-  // return function (storyFn: any) {
-  //   return <Provider store={store}>{storyFn()}</Provider>
-  // }
-  return {
-    decorator: (storyFn: any) => <Provider store={store}>{storyFn()}</Provider>,
-    dispatch: (action: AnyAction) => store.dispatch(action),
-    Dispatcher: (props: DispatcherProps) => {
-      const [dispatched, setDispatched] = React.useState(false)
-      if (!dispatched) {
-        setTimeout(() => {
-          store.dispatch(props.action)
-          setTimeout(() => {
-            setDispatched(true)
-          })
-        })
-        return <div />
-      }
-      return props.children
-    },
-  }
-}
+import { PersistGate } from 'redux-persist/integration/react'
 
 export function WithRedux(props: {
   state?: Partial<ReduxState>
   children: React.ReactElement
+  persist?: boolean
 }) {
-  const { store } = createStore(props.state)
-  console.log(store.getState())
-  return <Provider store={store}>{props.children}</Provider>
+  const { store, persistor } = createStore(
+    { ...props.state },
+    {
+      persist: props.persist === false ? false : true,
+    }
+  )
+  return (
+    <Provider store={store}>
+      {props.persist !== false && (
+        <PersistGate loading="Loading" persistor={persistor}>
+          {props.children}
+        </PersistGate>
+      )}
+      {props.persist === false && props.children}
+    </Provider>
+  )
 }

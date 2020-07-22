@@ -1,12 +1,11 @@
-import { withReduxDecorator, WithRedux } from '../../utils/storybook.utils'
-import restaurants from '../../restaurants.json'
-import { first } from 'lodash'
-import Appbar from '.'
 import React from 'react'
-import { addToCart } from '../../redux/actions/cart.actions'
+import { first } from 'lodash'
+
+import Appbar from '.'
 import pizzas from '../../menu.json'
-import { Store } from 'redux'
-import createStore from '../../redux/createStore'
+import restaurants from '../../restaurants.json'
+import { WithRedux } from '../../utils/storybook.utils'
+import Cart from '../Cart'
 
 export default {
   title: 'Layout / Appbar / Container',
@@ -16,7 +15,7 @@ export default {
 const restaurant = first(restaurants)
 
 export const EmptyCart = () => (
-  <WithRedux state={{ selectedRestaurant: restaurant }}>
+  <WithRedux state={{ selectedRestaurant: restaurant }} persist={false}>
     <Appbar />
   </WithRedux>
 )
@@ -26,11 +25,30 @@ EmptyCart.story = {
 }
 
 export const NotEmptyCart = () => (
-  <WithRedux state={{ selectedRestaurant: restaurant, cart: [pizzas[0]] }}>
+  <WithRedux
+    state={{ selectedRestaurant: restaurant, cart: [pizzas[0]] }}
+    persist={false}
+  >
     <Appbar />
   </WithRedux>
 )
 
 NotEmptyCart.story = {
-  name: 'With not empty cart',
+  name: 'With n items in cart',
+}
+
+export const WithCartModal = () => (
+  <WithRedux
+    state={{ selectedRestaurant: restaurant, cart: [pizzas[0]] }}
+    persist={false}
+  >
+    <div>
+      <Appbar />
+      <Cart />
+    </div>
+  </WithRedux>
+)
+
+WithCartModal.story = {
+  name: 'With cart modal',
 }

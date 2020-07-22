@@ -13,7 +13,7 @@ export default {
 export const CloseAppbar = () => (
   <div style={{}}>
     <Appbar
-      isOpen={false}
+      isCartModalOpen={false}
       cartSize={10}
       open={openCart}
       restaurant={first(restaurants)}
@@ -28,7 +28,7 @@ CloseAppbar.story = {
 export const OpenAppbar = () => (
   <div style={{}}>
     <Appbar
-      isOpen
+      isCartModalOpen
       cartSize={10}
       open={openCart}
       restaurant={first(restaurants)}
@@ -43,7 +43,7 @@ OpenAppbar.story = {
 export const AppbarWithEmptyCart = () => (
   <div style={{}}>
     <Appbar
-      isOpen
+      isCartModalOpen
       cartSize={0}
       open={openCart}
       restaurant={first(restaurants)}

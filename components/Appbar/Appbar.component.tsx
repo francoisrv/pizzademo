@@ -10,18 +10,17 @@ import { openCart } from '../../redux/actions/cart.actions'
 import { Restaurant } from '../../types'
 
 export interface AppbarProps {
-  isOpen: boolean
+  isCartModalOpen: boolean
   cartSize: number
   open: typeof openCart
   restaurant: Restaurant
 }
 
 const Appbar: React.FC<AppbarProps> = (props) => {
-  console.log({ props })
-  const { isOpen, cartSize, open, restaurant } = props
+  const { isCartModalOpen, cartSize, open, restaurant } = props
 
   function openCartAction() {
-    if (!isOpen) {
+    if (!isCartModalOpen) {
       if (cartSize) {
         open()
       }

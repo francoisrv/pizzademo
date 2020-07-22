@@ -1,11 +1,9 @@
 import React from 'react'
 import CartItem from '.'
 import menu from '../../menu.json'
-import { withReduxDecorator } from '../../utils/storybook.utils'
 
 export default {
   title: 'Cart / Cart Item',
-  decorators: [withReduxDecorator],
 }
 
 export const ReduxExample = () => (

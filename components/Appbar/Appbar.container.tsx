@@ -4,11 +4,13 @@ import Appbar from './Appbar.component'
 import ReduxState from '../../redux/state'
 
 export default connect(
-  (state: ReduxState) => ({
-    restaurant: state.selectedRestaurant,
-    isOpen: Boolean(state.selectedRestaurant),
-    cartSize: state.cart.length,
-  }),
+  (state: ReduxState) => {
+    return {
+      restaurant: state.selectedRestaurant,
+      isCartModalOpen: state.cartOpen,
+      cartSize: state.cart.length,
+    }
+  },
   {
     open: openCart,
   }
