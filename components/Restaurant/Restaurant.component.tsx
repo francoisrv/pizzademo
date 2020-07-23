@@ -1,76 +1,71 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
-import { kebabCase, first } from 'lodash'
-import Typography from '@material-ui/core/Typography'
-import { useMediaQuery } from 'react-responsive'
+import { pick } from 'lodash'
+import Dialog from '@material-ui/core/Dialog'
+import Button from '@material-ui/core/Button'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogContentText from '@material-ui/core/DialogContentText'
+import DialogTitle from '@material-ui/core/DialogTitle'
 
 import { Restaurant } from '../../types'
-import Ratings from '../Ratings'
 import Menu from '../Menu'
-import restaurants from '../../restaurants.json'
 import SlideOnScroll from '../SlideOnScroll'
 import Appbar from '../Appbar'
+import RestaurantHeader from '../RestaurantHeader'
+import RestaurantVideo from '../RestaurantVideo'
+import { useIsMobile } from '../../hooks'
 
 export interface RestaurantViewProps {
   restaurant?: Restaurant
 }
 
 const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
-  const isMobile = useMediaQuery({
-    query: '(max-device-width: 500px)',
-  })
+  const { restaurant } = props
+  const [menuOpen, setMenuOpen] = React.useState(true)
+  const isMobile = useIsMobile()
 
   return (
-    <div
-      id="restaurant"
-      style={{
-        height: '100vh',
-        width: '100vw',
-        boxSizing: 'border-box',
-        overflow: 'auto',
-      }}
-    >
-      <SlideOnScroll>
-        <div>
+    <div id="restaurant">
+      {!isMobile && (
+        <>
           <Appbar />
-        </div>
-      </SlideOnScroll>
-      <div style={{ height: '20vh' }} />
-      <header>
-        <div>
+
           <div>
-            <Typography variant={isMobile ? 'h4' : 'h2'}>
-              {props.restaurant.name}
-            </Typography>
-            <Ratings
-              ratings={props.restaurant.ratings}
-              size={isMobile ? 2 : 4.5}
-            />
+            <RestaurantVideo name={restaurant.name} />
           </div>
-        </div>
-      </header>
 
-      <div>
-        <div>
-          <ReactPlayer
-            height="100%"
-            loop
-            playing
-            url={`https://storage.cloud.google.com/pizzame/${kebabCase(
-              props.restaurant.name
-            )}.webm`}
-            width="100%"
-          />
-        </div>
-      </div>
+          <Dialog open={menuOpen}>
+            <DialogTitle>Menu</DialogTitle>
+            <DialogContent>
+              <Menu />
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={() => setMenuOpen(false)}>Close</Button>
+              <Button>Checkout</Button>
+            </DialogActions>
+          </Dialog>
+        </>
+      )}
 
-      <Menu />
+      {isMobile && (
+        <>
+          <SlideOnScroll>
+            <div>
+              <Appbar />
+            </div>
+          </SlideOnScroll>
+          <div style={{ marginTop: 56, marginBottom: -8 }}>
+            <div className="video-parallax-container">
+              <div className="video-parallax-wrapper">
+                <RestaurantVideo name={restaurant.name} />
+              </div>
+            </div>
+          </div>
+          <Menu />
+        </>
+      )}
     </div>
   )
-}
-
-RestaurantView.defaultProps = {
-  restaurant: first(restaurants),
 }
 
 export default RestaurantView

@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/restaurant-header",
+  "main": "./RestaurantHeader.component.tsx"
+}

@@ -1,0 +1,27 @@
+#restaurant {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: auto;
+  /* z-index: 99; */
+  position: fixed;
+  top: 0;
+}
+
+.restaurant-header {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 10px;
+  margin-bottom: 32px;
+}
+
+.video-parallax-container {
+  position: relative;
+  height: 230px;
+}
+
+.video-parallax-wrapper {
+  position: fixed;
+}

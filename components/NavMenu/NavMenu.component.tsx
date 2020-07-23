@@ -1,29 +1,43 @@
 import React from 'react'
-import Menu, { MenuProps } from '@material-ui/core/Menu'
+import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import GithubIcon from '@material-ui/icons/GitHub'
 import StorybookIcon from '@material-ui/icons/LibraryBooks'
 import LighthouseIcon from '@material-ui/icons/Flight'
+import { Anchor } from '../Nav/Nav.component'
 
 export interface NavMenuProps {
-  // open: boolean
+  open: boolean
+  anchorEl: Anchor
+  onClose: () => any
 }
 
-export default function NavMenu() {
+export default function NavMenu(props: NavMenuProps) {
+  const { open, anchorEl, onClose } = props
   return (
     <Menu
-      open
-      elevation={0}
+      open={open}
+      anchorEl={anchorEl}
+      elevation={2}
       anchorOrigin={{
         horizontal: 'left',
-        vertical: 'center',
+        vertical: 'top',
+      }}
+      transformOrigin={{
+        vertical: 'bottom',
+        horizontal: 'center',
       }}
       keepMounted
+      onClose={onClose}
     >
       <MenuItem>
-        <ListItemIcon>
+        <ListItemIcon
+          onClick={() =>
+            window.open('https://github.com/francoisrv/pizzademo', '_blank')
+          }
+        >
           <GithubIcon />
         </ListItemIcon>
         <ListItemText primary="GitHub" />

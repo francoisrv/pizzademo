@@ -9,9 +9,9 @@ export interface SlideOnScrollProps {
 
 export default function SlideOnScroll(props: SlideOnScrollProps) {
   const { children, target } = props
-  const trigger = useScrollTrigger({ target })
+  const trigger = useScrollTrigger({ target, threshold: 220 })
   return (
-    <Slide appear={false} direction="down" in={trigger}>
+    <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
   )

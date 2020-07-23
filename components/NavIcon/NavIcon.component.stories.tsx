@@ -6,6 +6,6 @@ export default {
   title: 'Nav Icon',
 }
 
-export const Example = () => <NavIcon />
+export const Example = () => <NavIcon onClick={() => {}} />
 
 Example.story = { name: 'Example' }

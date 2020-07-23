@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/restaurant-video",
+  "main": "./RestaurantVideo.component.tsx"
+}

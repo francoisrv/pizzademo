@@ -4,7 +4,6 @@ import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import GridListTileBar from '@material-ui/core/GridListTileBar'
 import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
 
 import { Pizza } from '../../types'
 import Ingredients from '../Ingredients'
@@ -18,7 +17,6 @@ const Menu: React.FC<MenuProps> = (props) => {
 
   return (
     <div className="menu">
-      <Typography variant="h3">Menu</Typography>
       <div className="menu-list-wrapper">
         <GridList cellHeight={210} cols={3} spacing={4}>
           {props.pizzas.map((pizza) => (

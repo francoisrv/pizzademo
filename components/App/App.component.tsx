@@ -4,7 +4,7 @@ import CartButton from '../CartButton'
 import Map from '../Map'
 import Cart from '../Cart'
 import RestaurantView from '../Restaurant'
-import NavIcon from '../NavIcon'
+import Nav from '../Nav'
 
 export interface AppProps {
   showRestaurant: boolean
@@ -15,12 +15,7 @@ export default function App(props: AppProps) {
 
   return (
     <div>
-      <div
-        className={classNames(
-          'map-container',
-          showRestaurant && 'map-container-restaurant'
-        )}
-      >
+      <div className="map-container">
         <Map />
       </div>
 
@@ -28,7 +23,7 @@ export default function App(props: AppProps) {
 
       <CartButton />
 
-      <NavIcon />
+      <Nav />
 
       <Cart />
     </div>

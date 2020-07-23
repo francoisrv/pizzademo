@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/nav",
+  "main": "./Nav.component.tsx"
+}

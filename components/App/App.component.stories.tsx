@@ -3,6 +3,7 @@ import React from 'react'
 import { WithRedux } from '../../utils/storybook.utils'
 import '../../css/map.css'
 import '../../css/cart.css'
+import '../../css/restaurant.css'
 import restaurants from '../../restaurants.json'
 import { first } from 'lodash'
 
