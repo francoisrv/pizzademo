@@ -18,7 +18,12 @@ const Menu: React.FC<MenuProps> = (props) => {
   return (
     <div className="menu">
       <div className="menu-list-wrapper">
-        <GridList cellHeight={210} cols={3} spacing={4}>
+        <GridList
+          cellHeight={210}
+          cols={3}
+          spacing={4}
+          style={{ backgroundColor: 'white' }}
+        >
           {props.pizzas.map((pizza) => (
             <GridListTile
               key={pizza.name}

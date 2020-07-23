@@ -16,6 +16,7 @@ export default function RestaurantVideo(props: RestaurantVideoProps) {
       playing
       url={`https://storage.cloud.google.com/pizzame/${kebabCase(name)}.webm`}
       width="100%"
+      controls
     />
   )
 }

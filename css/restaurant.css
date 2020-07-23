@@ -19,9 +19,24 @@
 
 .video-parallax-container {
   position: relative;
-  height: 230px;
+  height: 580px;
 }
 
 .video-parallax-wrapper {
   position: fixed;
+  width: 100%;
+}
+
+.menu {
+  background-color: white !important;
+}
+
+.menu-list-wrapper {
+  background-color: white !important;
+}
+
+@media (max-device-width: 500px) {
+  .video-parallax-container {
+    height: 230px;
+  }
 }

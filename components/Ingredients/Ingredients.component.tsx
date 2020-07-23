@@ -84,6 +84,7 @@ const Ingredients: React.FC<IngredientsProps> = (props) => (
         color="primary"
         onClick={() => {
           props.addToCart(props.pizza)
+          props.onClose()
         }}
       >
         Add to cart

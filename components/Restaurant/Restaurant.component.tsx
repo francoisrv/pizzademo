@@ -21,18 +21,28 @@ export interface RestaurantViewProps {
 
 const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
   const { restaurant } = props
-  const [menuOpen, setMenuOpen] = React.useState(true)
+  const [menuOpen, setMenuOpen] = React.useState(false)
   const isMobile = useIsMobile()
 
   return (
     <div id="restaurant">
       {!isMobile && (
         <>
-          <Appbar />
+          <SlideOnScroll>
+            <div>
+              <Appbar />
+            </div>
+          </SlideOnScroll>
 
-          <div>
-            <RestaurantVideo name={restaurant.name} />
+          <div style={{ marginTop: 64 }}>
+            <div className="video-parallax-container">
+              <div className="video-parallax-wrapper">
+                <RestaurantVideo name={restaurant.name} />
+              </div>
+            </div>
           </div>
+
+          <Menu />
 
           <Dialog open={menuOpen}>
             <DialogTitle>Menu</DialogTitle>

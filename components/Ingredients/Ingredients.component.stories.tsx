@@ -6,19 +6,16 @@ import { first } from 'lodash'
 import { addToCart } from '../../redux/actions/cart.actions'
 
 export default {
-  title: 'Ingredients',
-  component: Ingredients,
+  title: 'Ingredients / Component',
 }
 
 export const IngredientsExample = () => (
-  <div style={{}}>
-    <Ingredients
-      open
-      onClose={() => {}}
-      pizza={first(pizzas)}
-      addToCart={addToCart}
-    />
-  </div>
+  <Ingredients
+    open
+    onClose={() => {}}
+    pizza={first(pizzas)}
+    addToCart={addToCart}
+  />
 )
 
 IngredientsExample.story = {
