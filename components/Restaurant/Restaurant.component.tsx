@@ -14,6 +14,7 @@ import Appbar from '../Appbar'
 import RestaurantHeader from '../RestaurantHeader'
 import RestaurantVideo from '../RestaurantVideo'
 import { useIsMobile } from '../../hooks'
+import MenuList from '../MenuList'
 
 export interface RestaurantViewProps {
   restaurant?: Restaurant
@@ -27,21 +28,20 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
   return (
     <div id="restaurant">
       {!isMobile && (
-        <>
-          <SlideOnScroll>
-            <div>
-              <Appbar />
-            </div>
-          </SlideOnScroll>
-
-          <div style={{ marginTop: 64 }}>
-            <div className="video-parallax-container">
-              <div className="video-parallax-wrapper">
-                <RestaurantVideo name={restaurant.name} />
-              </div>
-            </div>
+        <div
+          style={{
+            boxSizing: 'border-box',
+            height: '100vh',
+          }}
+        >
+          <div className="wrapper">
+            <RestaurantVideo name={restaurant.name} />
           </div>
-        </>
+
+          <div id="menu">
+            <MenuList />
+          </div>
+        </div>
       )}
 
       {isMobile && (
@@ -68,6 +68,19 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
 export default RestaurantView
 
 /*
+<SlideOnScroll>
+            <div>
+              <Appbar />
+            </div>
+          </SlideOnScroll>
+
+<div style={{ marginTop: 64 }}>
+            <div className="video-parallax-container">
+              <div className="video-parallax-wrapper">
+                <RestaurantVideo name={restaurant.name} />
+              </div>
+            </div>
+          </div>
 <Menu />
 
           <Dialog open={menuOpen}>
