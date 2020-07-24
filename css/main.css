@@ -6,6 +6,19 @@ body {
 
 .app-bar--header {
   flex: 1;
-  /* display: flex;
-  align-items: center; */
+}
+
+.fabs {
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  display: flex;
+}
+
+.fabs > * {
+  margin-left: 16px;
+}
+
+.fabs > *:empty {
+  margin-left: 0;
 }

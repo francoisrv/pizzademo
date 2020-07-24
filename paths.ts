@@ -44,3 +44,4 @@ export function getPatternValue(
 }
 
 export const RESTAURANT_PATH = '/restaurants/:restaurantName'
+export const MAP_PATH = '/'

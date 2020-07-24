@@ -28,12 +28,10 @@ export default function CartButton(props: CartButtonProps) {
   }
 
   return (
-    <div className="cart-button-container">
-      <Fab color="primary" size="large" onClick={onClick}>
-        <Badge badgeContent={items} color="secondary">
-          <ShoppingCartIcon className="cart-button-icon" />
-        </Badge>
-      </Fab>
-    </div>
+    <Fab color="primary" size="large" onClick={onClick}>
+      <Badge badgeContent={items} color="secondary">
+        <ShoppingCartIcon className="cart-button-icon" />
+      </Badge>
+    </Fab>
   )
 }

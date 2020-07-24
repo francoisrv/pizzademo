@@ -5,25 +5,38 @@ import Map from '../Map'
 import Cart from '../Cart'
 import RestaurantView from '../Restaurant'
 import Nav from '../Nav'
+import { Switch, Route } from 'react-router-dom'
+import { MAP_PATH, RESTAURANT_PATH } from '../../paths'
+import MapIcon from '../MapIcon'
 
-export interface AppProps {
-  showRestaurant: boolean
-}
-
-export default function App(props: AppProps) {
-  const { showRestaurant } = props
-
+export default function App() {
   return (
     <div>
-      <div className="map-container">
-        <Map />
+      <Switch>
+        <Route
+          exact
+          path={MAP_PATH}
+          component={() => (
+            <div className="map-container">
+              <Map />
+            </div>
+          )}
+        />
+
+        <Route exact path={RESTAURANT_PATH} component={RestaurantView} />
+      </Switch>
+
+      <div className="fabs">
+        <div>
+          <CartButton />
+        </div>
+        <div>
+          <MapIcon />
+        </div>
+        <div>
+          <Nav />
+        </div>
       </div>
-
-      {showRestaurant && <RestaurantView />}
-
-      <CartButton />
-
-      <Nav />
 
       <Cart />
     </div>

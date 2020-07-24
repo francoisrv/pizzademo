@@ -1,9 +1,3 @@
-.cart-button-container {
-  position: fixed;
-  bottom: 25px;
-  right: 100px;
-}
-
 .cart-button-icon {
   font-size: 2.5em !important;
 }

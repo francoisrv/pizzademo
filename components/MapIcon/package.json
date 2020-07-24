@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/map-icon",
+  "main": "./MapIcon.container.tsx"
+}

@@ -21,7 +21,7 @@ const Menu: React.FC<MenuProps> = (props) => {
         <GridList
           cellHeight={210}
           cols={3}
-          spacing={4}
+          spacing={0}
           style={{ backgroundColor: 'white' }}
         >
           {props.pizzas.map((pizza) => (
