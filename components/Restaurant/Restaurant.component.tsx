@@ -41,19 +41,6 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
               </div>
             </div>
           </div>
-
-          <Menu />
-
-          <Dialog open={menuOpen}>
-            <DialogTitle>Menu</DialogTitle>
-            <DialogContent>
-              <Menu />
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={() => setMenuOpen(false)}>Close</Button>
-              <Button>Checkout</Button>
-            </DialogActions>
-          </Dialog>
         </>
       )}
 
@@ -79,3 +66,18 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
 }
 
 export default RestaurantView
+
+/*
+<Menu />
+
+          <Dialog open={menuOpen}>
+            <DialogTitle>Menu</DialogTitle>
+            <DialogContent>
+              <Menu />
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={() => setMenuOpen(false)}>Close</Button>
+              <Button>Checkout</Button>
+            </DialogActions>
+          </Dialog>
+          */

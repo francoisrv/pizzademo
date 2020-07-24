@@ -1,11 +1,11 @@
 import React from 'react'
-import classNames from 'classnames'
+import { Switch, Route } from 'react-router-dom'
+
 import CartButton from '../CartButton'
 import Map from '../Map'
 import Cart from '../Cart'
 import RestaurantView from '../Restaurant'
 import Nav from '../Nav'
-import { Switch, Route } from 'react-router-dom'
 import { MAP_PATH, RESTAURANT_PATH } from '../../paths'
 import MapIcon from '../MapIcon'
 

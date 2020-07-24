@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/splash",
+  "main": "./Splash.container.tsx"
+}
