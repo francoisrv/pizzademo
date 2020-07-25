@@ -32,12 +32,12 @@ export default function NavMenu(props: NavMenuProps) {
       keepMounted
       onClose={onClose}
     >
-      <MenuItem>
-        <ListItemIcon
-          onClick={() =>
-            window.open('https://github.com/francoisrv/pizzademo', '_blank')
-          }
-        >
+      <MenuItem
+        onClick={() =>
+          window.open('https://github.com/francoisrv/pizzademo', '_blank')
+        }
+      >
+        <ListItemIcon>
           <GithubIcon />
         </ListItemIcon>
         <ListItemText primary="GitHub" />

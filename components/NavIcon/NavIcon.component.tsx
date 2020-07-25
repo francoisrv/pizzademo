@@ -1,22 +1,18 @@
-import React, { SyntheticEvent } from 'react'
-import MenuIcon from '@material-ui/icons/Menu'
 import Fab from '@material-ui/core/Fab'
+import GithubIcon from '@material-ui/icons/GitHub'
+import React, { SyntheticEvent } from 'react'
 
-export interface NavIconProps {
-  onClick: (e: React.MouseEvent) => any
-}
-
-export default function NavIcon(props: NavIconProps) {
-  const { onClick } = props
-
+export default function NavIcon() {
   return (
     <Fab
       color="secondary"
       size="large"
-      onClick={onClick}
+      onClick={() =>
+        window.open('https://github.com/francoisrv/pizzademo', '_blank')
+      }
       aria-label="Navigation"
     >
-      <MenuIcon />
+      <GithubIcon />
     </Fab>
   )
 }

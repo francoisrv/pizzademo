@@ -1,4 +1,4 @@
 {
   "name": "@pizzademo/nav-icon",
-  "main": "./NavIcon.container.tsx"
+  "main": "./NavIcon.component.tsx"
 }

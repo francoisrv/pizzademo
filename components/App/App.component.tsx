@@ -1,14 +1,14 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+import Appbar from '../Appbar'
+import Cart from '../Cart'
 import CartButton from '../CartButton'
 import Map from '../Map'
-import Cart from '../Cart'
-import RestaurantView from '../Restaurant'
-import Nav from '../Nav'
-import { MAP_PATH, RESTAURANT_PATH } from '../../paths'
 import MapIcon from '../MapIcon'
-import Appbar from '../Appbar'
+import NavIcon from '../NavIcon'
+import RestaurantView from '../Restaurant'
+import { MAP_PATH, RESTAURANT_PATH } from '../../paths'
 
 export default function App() {
   return (
@@ -37,7 +37,7 @@ export default function App() {
           <MapIcon />
         </div>
         <div>
-          <Nav />
+          <NavIcon />
         </div>
       </div>
 
