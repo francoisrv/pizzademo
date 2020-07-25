@@ -11,3 +11,4 @@ This private app is meant to broadcast my skills with React/Redux
 - CSS
 - Material UI
 - Mapbox
+- Firebase hosting
