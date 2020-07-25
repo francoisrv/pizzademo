@@ -35,6 +35,7 @@ export default connect(
             className="rotate"
             src="https://storage.cloud.google.com/pizzame/pizza.png"
             onClick={() => props.previewRestaurantAction(restaurant)}
+            alt={restaurant.name}
             style={
               {
                 // marginTop: -20

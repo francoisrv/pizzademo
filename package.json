@@ -44,6 +44,7 @@
     "lax.js": "^1.2.5",
     "lodash": "^4.17.19",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-compress": "^2.0.2",
     "react": ">=15",
     "react-dom": "^16.13.1",
     "react-map-gl": "^5.2.7",

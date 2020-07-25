@@ -10,7 +10,12 @@ export default function NavIcon(props: NavIconProps) {
   const { onClick } = props
 
   return (
-    <Fab color="secondary" size="large" onClick={onClick}>
+    <Fab
+      color="secondary"
+      size="large"
+      onClick={onClick}
+      aria-label="Navigation"
+    >
       <MenuIcon />
     </Fab>
   )
