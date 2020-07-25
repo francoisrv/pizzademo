@@ -1,17 +1,9 @@
 import React from 'react'
-import { pick } from 'lodash'
-import Dialog from '@material-ui/core/Dialog'
-import Button from '@material-ui/core/Button'
-import DialogActions from '@material-ui/core/DialogActions'
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogTitle from '@material-ui/core/DialogTitle'
 
 import { Restaurant } from '../../types'
 import Menu from '../Menu'
 import SlideOnScroll from '../SlideOnScroll'
 import Appbar from '../Appbar'
-import RestaurantHeader from '../RestaurantHeader'
 import RestaurantVideo from '../RestaurantVideo'
 import { useIsMobile } from '../../hooks'
 import MenuList from '../MenuList'
@@ -22,18 +14,19 @@ export interface RestaurantViewProps {
 
 const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
   const { restaurant } = props
-  const [menuOpen, setMenuOpen] = React.useState(false)
+  const [] = React.useState(false)
   const isMobile = useIsMobile()
 
   return (
     <div id="restaurant">
       {!isMobile && (
-        <div
-          style={{
-            boxSizing: 'border-box',
-            height: '100vh',
-          }}
-        >
+        <div>
+          <SlideOnScroll>
+            <div>
+              <Appbar />
+            </div>
+          </SlideOnScroll>
+
           <div className="wrapper">
             <RestaurantVideo name={restaurant.name} />
           </div>
