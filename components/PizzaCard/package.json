@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/pizza-card",
+  "main": "./PizzaCard.container.tsx"
+}

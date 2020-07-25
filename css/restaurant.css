@@ -40,7 +40,7 @@
   bottom: 0;
   top: 0;
   box-sizing: border-box;
-  padding-top: calc(100vw * 0.5625);
+  padding-top: calc(56% - 87px);
   overflow: auto;
 }
 /* 
@@ -86,6 +86,18 @@
 .menu-pizza-image {
   height: 0;
   padding-top: 56.25%;
+}
+
+.menu-title {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.quantity-chip {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 @media (max-device-width: 500px) {

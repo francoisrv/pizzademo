@@ -49,8 +49,9 @@ const Ingredients: React.FC<IngredientsProps> = (props) => (
         <img
           src={get(props.pizza, 'image', '')}
           style={{
-            height: 200,
-            width: 300,
+            objectFit: 'cover',
+            width: '100%',
+            borderRadius: 8,
           }}
         />
       </div>

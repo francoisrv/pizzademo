@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import ReduxState from '../../redux/state'
-import { closeCart } from '../../redux/actions/cart.actions'
+import { closeCart, checkOut } from '../../redux/actions/cart.actions'
 import Cart from './Cart.modal.component'
 import { groupPizzas, calculatePrice } from '../../utils'
 
@@ -14,5 +14,5 @@ export default connect(
       length: state.cart.length,
     }
   },
-  { close: closeCart }
+  { close: closeCart, checkOut }
 )(Cart)

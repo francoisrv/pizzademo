@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import { openCart } from '../../redux/actions/cart.actions'
 import Appbar from './Appbar.component'
 import ReduxState from '../../redux/state'
+import { resetSelectRestaurant } from '../../redux/actions/restaurant.actions'
 
 export default connect(
   (state: ReduxState) => {
@@ -13,5 +14,6 @@ export default connect(
   },
   {
     open: openCart,
+    goBack: resetSelectRestaurant,
   }
 )(Appbar)

@@ -10,6 +10,7 @@ import TextField from '@material-ui/core/TextField'
 
 import { PizzaCart } from '../../types'
 import { addToCart, removeFromCart } from '../../redux/actions/cart.actions'
+import Quantity from '../Quantity'
 
 interface CartItemProps {
   pizza: PizzaCart
@@ -29,13 +30,6 @@ const CartItem: React.FC<CartItemProps> = (props) => {
       2
     )}`
   }
-  const onChangeQuality = (qty: number) => {
-    if (qty > pizza.quantity) {
-      props.add(pizza)
-    } else {
-      props.remove(pizza)
-    }
-  }
 
   return (
     <>
@@ -51,14 +45,14 @@ const CartItem: React.FC<CartItemProps> = (props) => {
             </ListItem>
           ))}
         </List>
-        <div>
-          <TextField
-            variant="outlined"
-            value={pizza.quantity}
-            type="number"
-            onChange={(e) => onChangeQuality(Number(e.target.value))}
-            label="Quantity"
-          />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            margin: 12,
+          }}
+        >
+          <Quantity pizza={pizza} />
         </div>
       </Collapse>
       <Divider />

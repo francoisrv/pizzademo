@@ -8,6 +8,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import { DialogActions } from '@material-ui/core'
 import { PizzaCart } from '../../types'
 import CartItem from '../CartItem'
+import { checkOut } from '../../redux/actions/cart.actions'
 
 export interface CartProps {
   pizzas: PizzaCart[]
@@ -15,6 +16,7 @@ export interface CartProps {
   open: boolean
   close: () => void
   length: number
+  checkOut: typeof checkOut
 }
 
 const Cart: React.FC<CartProps> = (props) => {
@@ -37,7 +39,7 @@ const Cart: React.FC<CartProps> = (props) => {
         <Button variant="contained" color="secondary" onClick={close}>
           Close
         </Button>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={props.checkOut}>
           Check out €{price.toFixed(2)}
         </Button>
       </DialogActions>

@@ -4,25 +4,37 @@ import { ReduxActionType } from '../types'
 export function addToCart(pizza: Pizza) {
   return {
     type: ReduxActionType.ADD_TO_CART as ReduxActionType.ADD_TO_CART,
-    payload: { pizza }
+    payload: { pizza },
   }
 }
 
 export function removeFromCart(pizza: Pizza) {
   return {
     type: ReduxActionType.REMOVE_FROM_CART as ReduxActionType.REMOVE_FROM_CART,
-    payload: { pizza }
+    payload: { pizza },
   }
 }
 
 export function openCart() {
   return {
-    type: ReduxActionType.OPEN_CART as ReduxActionType.OPEN_CART
+    type: ReduxActionType.OPEN_CART as ReduxActionType.OPEN_CART,
   }
 }
 
 export function closeCart() {
   return {
-    type: ReduxActionType.CLOSE_CART as ReduxActionType.CLOSE_CART
+    type: ReduxActionType.CLOSE_CART as ReduxActionType.CLOSE_CART,
+  }
+}
+
+export function checkOut() {
+  return {
+    type: ReduxActionType.CHECKOUT as ReduxActionType.CHECKOUT,
+  }
+}
+
+export function clearCart() {
+  return {
+    type: ReduxActionType.CLEAR_CART as ReduxActionType.CLEAR_CART,
   }
 }

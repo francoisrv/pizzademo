@@ -8,10 +8,13 @@ import RestaurantView from '../Restaurant'
 import Nav from '../Nav'
 import { MAP_PATH, RESTAURANT_PATH } from '../../paths'
 import MapIcon from '../MapIcon'
+import Appbar from '../Appbar'
 
 export default function App() {
   return (
     <div>
+      <Appbar />
+
       <Switch>
         <Route
           exact

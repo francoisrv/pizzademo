@@ -1,10 +1,13 @@
 import ReduxState from '../state'
-import { addToCart, removeFromCart } from '../actions/cart.actions'
+import { addToCart, removeFromCart, clearCart } from '../actions/cart.actions'
 import { ReduxActionType } from '../types'
 
 type State = ReduxState['cart']
 
-type Actions = ReturnType<typeof addToCart> | ReturnType<typeof removeFromCart>
+type Actions =
+  | ReturnType<typeof addToCart>
+  | ReturnType<typeof removeFromCart>
+  | ReturnType<typeof clearCart>
 
 const initialState: State = []
 
@@ -27,6 +30,9 @@ export default function cartReducer(
       }
       return true
     })
+  }
+  if (action.type === ReduxActionType.CLEAR_CART) {
+    return initialState
   }
   return state
 }
