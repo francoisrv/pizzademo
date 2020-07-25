@@ -31,15 +31,15 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
             <RestaurantVideo name={restaurant.name} />
           </div>
 
-          <div id="menu">
-            <MenuList />
-          </div>
+          <MenuList />
         </div>
       )}
 
       {isMobile && (
         <>
-          <Appbar />
+          <SlideOnScroll target=".menu">
+            <div></div>
+          </SlideOnScroll>
           <div style={{ marginTop: 56, marginBottom: -8 }}>
             <div className="video-parallax-container">
               <div className="video-parallax-wrapper">

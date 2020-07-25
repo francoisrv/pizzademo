@@ -38,6 +38,7 @@
     "@types/redux-logger": "^3.0.8",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.8.0",
+    "describe-react": "^1.2.23",
     "history": "^4.10.1",
     "immutable": "^4.0.0-rc.12",
     "jest": "^26.1.0",
@@ -63,6 +64,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
