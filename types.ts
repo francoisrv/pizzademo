@@ -1,6 +1,6 @@
 export interface Restaurant {
   name: string
-  coords: [number, number]
+  coords: { oa: number; ha: number }
   ratings: number
   id: string
 }

@@ -9,6 +9,7 @@ This private app is meant to broadcast my skills with React/Redux
 - React
 - Redux
 - Redux saga
+- Firebase Database Firestore
 - CSS
 - Material UI
 - Mapbox
@@ -53,6 +54,10 @@ MUI is always a serious candidate when it is time to pick up a design framework,
 ## Mapbox
 
 I like Mapbox over other solutions like Google Maps or OpenMap because it is highly customizable.
+
+## Firebase database
+
+I use Firestore for storing data
 
 ## Firebase hosting
 
