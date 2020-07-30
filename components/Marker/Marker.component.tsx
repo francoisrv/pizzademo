@@ -24,8 +24,8 @@ const Marker: React.FC<MarkerProps> = (props) => {
 
   return (
     <Popup
-      latitude={props.restaurant.latitude}
-      longitude={props.restaurant.longitude}
+      latitude={props.restaurant.coords[0]}
+      longitude={props.restaurant.coords[1]}
       onClose={props.onClose}
       closeOnClick={false}
     >

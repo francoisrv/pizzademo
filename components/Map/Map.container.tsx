@@ -28,8 +28,8 @@ export default connect(
       {props.restaurants.map((restaurant) => (
         <Marker
           key={restaurant.name}
-          latitude={restaurant.latitude}
-          longitude={restaurant.longitude}
+          latitude={restaurant.coords[0]}
+          longitude={restaurant.coords[1]}
         >
           <img
             className="rotate"

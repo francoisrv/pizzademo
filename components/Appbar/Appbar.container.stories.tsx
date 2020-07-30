@@ -6,13 +6,16 @@ import pizzas from '../../menu.json'
 import restaurants from '../../restaurants.json'
 import { WithRedux } from '../../utils/storybook.utils'
 import Cart from '../Cart'
+import { Restaurant } from '../../types'
 
 export default {
   title: 'Appbar / Container',
   component: Appbar,
 }
 
-const restaurant = first(restaurants)
+const nextRestaurants = restaurants as Restaurant[]
+
+const restaurant = first(nextRestaurants)
 
 export const EmptyCart = () => (
   <WithRedux state={{ selectedRestaurant: restaurant }} persist={false}>

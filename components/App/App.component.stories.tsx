@@ -6,14 +6,17 @@ import '../../css/cart.css'
 import '../../css/restaurant.css'
 import restaurants from '../../restaurants.json'
 import { first } from 'lodash'
+import { Restaurant } from '../../types'
 
 export default {
   title: 'App / Component',
 }
 
+const nextRestaurants = restaurants as Restaurant[]
+
 export const MapView = () => (
   <WithRedux persist={false}>
-    <App showRestaurant={false} />
+    <App />
   </WithRedux>
 )
 
@@ -22,8 +25,11 @@ MapView.story = {
 }
 
 export const RestaurantView = () => (
-  <WithRedux persist={false} state={{ selectedRestaurant: first(restaurants) }}>
-    <App showRestaurant />
+  <WithRedux
+    persist={false}
+    state={{ selectedRestaurant: first(nextRestaurants) }}
+  >
+    <App />
   </WithRedux>
 )
 
