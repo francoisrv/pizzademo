@@ -1,6 +1,7 @@
 export { default as cart } from './reducers/cart.reducer'
 export { default as cartOpen } from './reducers/cartOpen.reducer'
 export { default as coords } from './reducers/coords.reducer'
+export { default as loaded } from './reducers/loaded.reducer'
 export { default as menu } from './reducers/menu.reducer'
 export { default as previewedRestaurant } from './reducers/previewedRestaurant.reducer'
 export { default as restaurants } from './reducers/restaurants.reducer'

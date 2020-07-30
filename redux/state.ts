@@ -9,4 +9,5 @@ export default interface ReduxState {
   cart: Pizza[]
   cartOpen: boolean
   router: any
+  loaded: boolean
 }

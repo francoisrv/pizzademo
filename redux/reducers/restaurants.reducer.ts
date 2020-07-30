@@ -1,10 +1,19 @@
 import ReduxState from '../state'
-import restaurants from '../../restaurants.json'
+import { loadRestaurants } from '../actions/restaurant.actions'
+import { ReduxActionType } from '../types'
 
 type State = ReduxState['restaurants']
 
-const initialState: State = restaurants
+type Action = ReturnType<typeof loadRestaurants>
 
-export default function restaurantsReducer(state: State = initialState): State {
+const initialState: State = []
+
+export default function restaurantsReducer(
+  state: State = initialState,
+  action: Action
+): State {
+  if (action.type === ReduxActionType.LOAD_RESTAURANTS) {
+    return action.payload.restaurants
+  }
   return state
 }

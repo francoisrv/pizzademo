@@ -1,8 +1,8 @@
 export interface Restaurant {
   name: string
-  latitude: number
-  longitude: number
+  coords: [number, number]
   ratings: number
+  id: string
 }
 
 export interface Pizza {

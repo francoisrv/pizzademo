@@ -1,6 +1,15 @@
 import { ReduxActionType } from '../types'
 import { Restaurant } from '../../types'
 
+export function loadRestaurants(restaurants: Restaurant[]) {
+  return {
+    type: ReduxActionType.LOAD_RESTAURANTS as ReduxActionType.LOAD_RESTAURANTS,
+    payload: {
+      restaurants,
+    },
+  }
+}
+
 export function selectRestaurant(restaurant: Restaurant) {
   return {
     type: ReduxActionType.SELECT_RESTAURANT as ReduxActionType.SELECT_RESTAURANT,
