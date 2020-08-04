@@ -32,15 +32,10 @@ export default connect(
           longitude={restaurant.coords.ha}
         >
           <img
-            className="rotate"
+            className="pizza-icon"
             src="https://storage.cloud.google.com/pizzame/pizza.png"
             onClick={() => props.previewRestaurantAction(restaurant)}
             alt={restaurant.name}
-            style={
-              {
-                // marginTop: -20
-              }
-            }
           />
         </Marker>
       ))}

@@ -16,7 +16,7 @@ function onSetViewPort(props: MapProps): ViewportProps {
     width: '100%',
     // @ts-ignore
     height: '100%',
-    zoom: 14,
+    zoom: 15,
     transitionDuration: 3000,
   }
 }
