@@ -1,0 +1,4 @@
+{
+  "name": "@pizzademo/pizza-icon",
+  "main": "./PizzaIcon.component.tsx"
+}

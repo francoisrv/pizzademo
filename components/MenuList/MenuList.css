@@ -1,0 +1,19 @@
+#menu-cards {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 20vh;
+}
+
+.menu-title {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.menu-icon {
+  width: 120px;
+}

@@ -1,11 +1,10 @@
 import React from 'react'
+import { useSpring, animated } from 'react-spring'
+
+import './Restaurant.css'
 
 import { Restaurant } from '../../types'
-import Menu from '../Menu'
-import SlideOnScroll from '../SlideOnScroll'
-import Appbar from '../Appbar'
 import RestaurantVideo from '../RestaurantVideo'
-import { useIsMobile } from '../../hooks'
 import MenuList from '../MenuList'
 
 export interface RestaurantViewProps {
@@ -14,72 +13,39 @@ export interface RestaurantViewProps {
 
 const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
   const { restaurant } = props
-  const [] = React.useState(false)
-  const isMobile = useIsMobile()
+  const { opacity, top } = useSpring({
+    opacity: 1,
+    top: '0vh',
+    from: { opacity: 0, top: '-100vh' },
+    // delay: 500,
+    // config: {  },
+  })
+  const videoAnimation = useSpring({
+    top: 0,
+  })
+  const menuRef = React.useRef()
+
+  function onMenuScroll(e) {
+    const { currentTarget } = e
+    const { height } = currentTarget.getBoundingClientRect()
+    const { scrollTop } = currentTarget
+    console.log(height / scrollTop)
+  }
 
   return (
-    <div id="restaurant">
-      {!isMobile && (
-        <div>
-          <SlideOnScroll target="#menu">
-            <div>
-              <Appbar />
-            </div>
-          </SlideOnScroll>
-
-          <div className="wrapper">
-            <RestaurantVideo name={restaurant.name} />
-          </div>
-
-          <MenuList />
-        </div>
-      )}
-
-      {isMobile && (
-        <>
-          <SlideOnScroll target=".menu">
-            <div></div>
-          </SlideOnScroll>
-          <div style={{ marginTop: 56, marginBottom: -8 }}>
-            <div className="video-parallax-container">
-              <div className="video-parallax-wrapper">
-                <RestaurantVideo name={restaurant.name} />
-              </div>
-            </div>
-          </div>
-          <Menu />
-        </>
-      )}
-    </div>
+    <animated.div
+      id="restaurant"
+      style={{ opacity, top }}
+      onScroll={onMenuScroll}
+    >
+      <div id="restaurant-video">
+        <RestaurantVideo name={restaurant.name} />
+      </div>
+      <div id="restaurant-menu" ref={menuRef}>
+        <MenuList />
+      </div>
+    </animated.div>
   )
 }
 
 export default RestaurantView
-
-/*
-<SlideOnScroll>
-            <div>
-              <Appbar />
-            </div>
-          </SlideOnScroll>
-
-<div style={{ marginTop: 64 }}>
-            <div className="video-parallax-container">
-              <div className="video-parallax-wrapper">
-                <RestaurantVideo name={restaurant.name} />
-              </div>
-            </div>
-          </div>
-<Menu />
-
-          <Dialog open={menuOpen}>
-            <DialogTitle>Menu</DialogTitle>
-            <DialogContent>
-              <Menu />
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={() => setMenuOpen(false)}>Close</Button>
-              <Button>Checkout</Button>
-            </DialogActions>
-          </Dialog>
-          */

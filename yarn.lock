@@ -5079,10 +5079,10 @@ des.js@^1.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
-describe-react@^1.2.24:
-  version "1.2.24"
-  resolved "https://registry.yarnpkg.com/describe-react/-/describe-react-1.2.24.tgz#ee719734c8547a30e3e325aa72f7423f6fe35dd4"
-  integrity sha512-Kz4n9f3neoucLUyv7YXMeICAAbqzD+WL86kCu1RoF2niR/fj+7qXXBK04WjMaCDxSLqahs2whwOk/hHJqVheqA==
+describe-react@^1.2.28:
+  version "1.2.28"
+  resolved "https://registry.yarnpkg.com/describe-react/-/describe-react-1.2.28.tgz#66968d2af7126050d5c45826bbe1790663a56f1d"
+  integrity sha512-I8T4s93GeLYwe1KniDSbbd3ZlL7ecWDiYLLHI4kPmJ/g8ksNKfeobQGQLG3kRBhu2mPBsCxtaMGlWtxO/w/eTQ==
   dependencies:
     "@types/colors" "^1.2.1"
     "@types/lodash" "^4.14.155"
@@ -10630,6 +10630,14 @@ react-sizeme@^2.6.7:
     invariant "^2.2.4"
     shallowequal "^1.1.0"
     throttle-debounce "^2.1.0"
+
+react-spring@^8.0.27:
+  version "8.0.27"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
+  integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    prop-types "^15.5.8"
 
 react-syntax-highlighter@^11.0.2:
   version "11.0.2"

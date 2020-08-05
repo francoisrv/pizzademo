@@ -3,6 +3,8 @@ import Fab from '@material-ui/core/Fab'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge'
 
+import './CartButton.css'
+
 import { openCart, closeCart } from '../../redux/actions/cart.actions'
 
 export interface CartButtonProps {

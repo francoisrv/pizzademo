@@ -3,7 +3,7 @@
   height: 100vh;
   transition: all 0.3s ease-out;
   position: fixed;
-  top: 0;
+  top: 63px;
 }
 
 .map-container-restaurant {

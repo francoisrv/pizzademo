@@ -1,0 +1,15 @@
+.pizza-icon {
+  animation: blink 3s ease-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    height: 80px;
+  }
+  50% {
+    height: 100px;
+  }
+  100% {
+    height: 80px;
+  }
+}

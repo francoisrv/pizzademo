@@ -1,9 +1,12 @@
 import React from 'react'
 import Chip from '@material-ui/core/Chip'
 import Fab from '@material-ui/core/Fab'
+import { filter } from 'lodash'
+
+import './Quantity.css'
+
 import { Pizza, PizzaCart } from '../../types'
 import { addToCart, removeFromCart } from '../../redux/actions/cart.actions'
-import { filter } from 'lodash'
 
 export interface QuantityProps {
   pizza: Pizza

@@ -7,6 +7,9 @@ import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import Chip from '@material-ui/core/Chip'
+
+import './PizzaCard.css'
+
 import { Pizza } from '../../types'
 import { addToCart } from '../../redux/actions/cart.actions'
 import ReduxState from '../../redux/state'

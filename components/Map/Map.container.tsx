@@ -7,6 +7,7 @@ import { pick } from 'lodash'
 import RestaurantMarker from '../Marker'
 import { previewRestaurant } from '../../redux/actions/restaurant.actions'
 import ReduxState from '../../redux/state'
+import PizzaIcon from '../PizzaIcon'
 
 type MapStoreProps = Pick<ReduxState, 'restaurants'> &
   Pick<ReduxState, 'coords'>
@@ -31,12 +32,9 @@ export default connect(
           latitude={restaurant.coords.oa}
           longitude={restaurant.coords.ha}
         >
-          <img
-            className="pizza-icon"
-            src="https://storage.cloud.google.com/pizzame/pizza.png"
-            onClick={() => props.previewRestaurantAction(restaurant)}
-            alt={restaurant.name}
-          />
+          <div onClick={() => props.previewRestaurantAction(restaurant)}>
+            <PizzaIcon alt={restaurant.name} />
+          </div>
         </Marker>
       ))}
       <RestaurantMarker />
