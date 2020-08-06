@@ -1,7 +1,13 @@
+/*
+  Material UI app bar title should stretch in order to push the icons to the right
+*/
 .app-bar--header {
   flex: 1;
 }
 
+/*
+  Group all FABs and absolute position them on the screen
+*/
 .fabs {
   position: fixed;
   bottom: 35px;
@@ -12,13 +18,25 @@
   padding: 8px;
 }
 
+/*
+  Add spacing between FABs
+*/
+
 .fabs > * {
   margin-left: 16px;
 }
 
+/*
+  Disable spacing for conditionnally-visible FABS (such as the Cart Icon)
+*/
+
 .fabs > *:empty {
   margin-left: 0;
 }
+
+/*
+  Container for the map
+*/
 
 .map-container {
   width: 100vw;

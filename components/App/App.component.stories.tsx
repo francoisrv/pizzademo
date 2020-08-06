@@ -1,12 +1,13 @@
 import App from './App.component'
 import React from 'react'
-import { WithRedux } from '../../utils/storybook.utils'
-import '../../css/map.css'
+import { first } from 'lodash'
+
 import '../../css/cart.css'
+import '../../css/map.css'
 import '../../css/restaurant.css'
 import restaurants from '../../restaurants.json'
-import { first } from 'lodash'
 import { Restaurant } from '../../types'
+import { WithRedux } from '../../utils/storybook.utils'
 
 export default {
   title: 'App / Component',
