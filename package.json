@@ -2,7 +2,7 @@
   "name": "pizzame",
   "version": "1.0.0",
   "scripts": {
-    "start": "rm -rf dist .cache && parcel --https index.html",
+    "start": "rm -rf dist .cache && parcel --port $PORT --hmr-port $HMR_PORT --https index.html",
     "build": "rm -rf public .cache && parcel build -d public index.html",
     "eslint": "eslint --fix .",
     "check": "tsc --noEmit",

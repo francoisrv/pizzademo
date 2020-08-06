@@ -12,7 +12,6 @@ const SlideOnScrollContainer: React.FC<SlideOnScrollContainerProps> = (
   const [ready, setReady] = React.useState(false)
   const { target } = props
   const elem = document.querySelector(target)
-  console.log({ target, elem })
   if (!elem && !ready) {
     setTimeout(() => {
       setReady(true)

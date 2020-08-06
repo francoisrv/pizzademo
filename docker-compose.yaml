@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  web:
+    image: node:14
+    command: npm start
+    ports:
+      - '1234:1234'
+      - '4567:4567'
+    environment:
+      - PORT=1234
+      - HMR_PORT=4567
+
+  storybook:
+    image: node:14
+    command: npm run storybook
+    ports:
+      - '6006:6006'

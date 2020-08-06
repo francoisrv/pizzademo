@@ -25,5 +25,5 @@
   height: 100vh;
   transition: all 0.3s ease-out;
   position: fixed;
-  top: 63px;
+  top: var(--app-bar-height);
 }

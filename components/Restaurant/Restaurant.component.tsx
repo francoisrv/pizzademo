@@ -26,10 +26,9 @@ const RestaurantView: React.FC<RestaurantViewProps> = (props) => {
   const menuRef = React.useRef()
 
   function onMenuScroll(e) {
-    const { currentTarget } = e
-    const { height } = currentTarget.getBoundingClientRect()
-    const { scrollTop } = currentTarget
-    console.log(height / scrollTop)
+    // const { currentTarget } = e
+    // const { height } = currentTarget.getBoundingClientRect()
+    // const { scrollTop } = currentTarget
   }
 
   return (
