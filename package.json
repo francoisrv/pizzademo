@@ -45,7 +45,7 @@
     "immutable": "^4.0.0-rc.12",
     "jest": "^26.1.0",
     "lax.js": "^1.2.5",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-compress": "^2.0.2",
     "react": ">=15",
